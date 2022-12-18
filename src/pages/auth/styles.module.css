@@ -1,0 +1,36 @@
+.content {
+    margin-top: 100px;
+    display: flex;
+}
+
+.content > img {
+    animation: expand .6s ease-in-out;
+    object-fit: cover;
+    border-radius: 20px 0 0 20px;
+}
+
+@keyframes expand {
+    from {
+        flex: 0 0 0;
+    }
+    t0 {
+        flex: 0 0 200px;
+    }
+}
+
+.wrapper {
+    padding: 12px 30px;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    background: var(--accent-red-2);
+    border-radius: 0 20px 20px 0;
+}
+
+.wrapper *:not(:last-child){
+    margin-bottom: 12px;
+}
+
+.wrapper h1 {
+    color: var(--accent-red-0)
+}

@@ -1,0 +1,17 @@
+.wrapper {
+    width: 100%;
+    min-width: 300px;
+    min-height: 300px;
+    border: 1px dashed var(--accent-red-0);
+    border-radius: 20px;
+    transition: .4s ease-in-out;
+}
+
+.wrapper.drag {
+    border: 1px solid var(--accent-red-0);
+    background: var(--accent-red-2);
+}
+
+.drop {
+    color: var(--accent-red-2);
+}

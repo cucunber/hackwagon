@@ -1,0 +1,81 @@
+@import './variables.css';
+
+body {
+	background: var(--light-0);
+	color: var(--dark-0);
+}
+
+.button {
+	padding: 12px 15px;
+	outline: 1px solid var(--accent-red-1);
+	border: 0px solid transparent;
+	cursor: pointer;
+}
+
+.button:disabled {
+	opacity: 0.5;
+	filter: grayscale(0.5);
+	cursor: not-allowed;
+}
+
+.rounded {
+	border-radius: 99999px;
+}
+
+.button-red {
+	background: var(--accent-red-0);
+	color: var(--light-0);
+	transition: .4s ease-in-out;
+}
+
+.button-red:not(:disabled):hover {
+	background: var(--accent-red-1);
+}
+
+.icon-button svg {
+	width: 100%;
+	height: 100%;
+}
+
+.block {
+	background: var(--light-0);
+	box-shadow: var(--shadow);
+	border-radius: 20px;
+}
+
+.container {
+	width: 100%;
+	max-width: 1200px;
+	margin: 10px auto;
+}
+
+.full-loader{
+	width: 100%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 300px;
+}
+
+.center {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+@media (max-width: 1201px){
+	.container {
+		max-width: 100%;
+		padding: 0 15px;
+	}
+}
+
+.highlight{
+	background: var(--accent-blue-0);
+	color: var(--light-0);
+	padding: 4px 8px;
+	border-radius: 99999px;
+	display: inline-block;
+	margin-bottom: 2px;
+}

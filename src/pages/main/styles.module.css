@@ -1,0 +1,14 @@
+.wrapper {
+    display: grid;
+    grid-template-areas: 'nav main';
+    grid-template-columns: 300px auto;
+    grid-gap: 20px;
+}
+
+.navigation {
+    grid-area: nav;
+}
+
+.content {
+    grid-area: main;
+}

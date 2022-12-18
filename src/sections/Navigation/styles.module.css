@@ -1,0 +1,36 @@
+.wrapper {
+}
+
+.container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.linkWrapper {
+  list-style-type: none;
+  display: block;
+}
+
+.linkContent {
+  padding: 10px 20px;
+  text-decoration: none;
+  color: var(--light-0);
+  transition: 0.4s ease-in-out;
+  background: var(--accent-red-1);
+  display: block;
+}
+
+.linkWrapper:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.linkContent:not(.active):hover {
+  color: var(--accent-red-0);
+  background: var(--accent-red-2);
+}
+
+.linkContent.active {
+  background: var(--accent-red-0);
+  cursor: default;
+}
