@@ -1,14 +1,18 @@
+import { Socket } from "../services";
 import API from "../services/api"
 import UserStore from "./user";
 
 const baseURL = process.env.REACT_APP_API_URL || ''
+const socketURL = process.env.REACT_APP_API_WS || ''
 
 class RootStore {
     private apiInstance: API
+    private socketInstance: Socket;
     userStore: UserStore
     constructor(){
         this.apiInstance = new API({ baseURL });
-        this.userStore = new UserStore(this.apiInstance);
+        this.socketInstance = new Socket(socketURL, '/ws/main_page/');
+        this.userStore = new UserStore(this.apiInstance, this.socketInstance);
     }
 }
 

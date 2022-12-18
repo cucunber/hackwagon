@@ -21,6 +21,15 @@ export const Saved = observer(() => {
     initialFetch();
   }, [initialFetch]);
 
+  useEffect(() => {
+    if(inventory.some((item) => item.status === 'in progress')){
+        userStore.subscribeForChanges();
+        return () => {
+            userStore.unsubscribeForChanges();
+        }
+    }
+  }, [inventory, userStore])
+
   if (isFetching) {
     return (
       <div className="full-loader">

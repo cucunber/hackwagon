@@ -7,7 +7,7 @@ export type CreateInventoryFileRequestPayload = FormData;
 
 const endpoints = {
   getInventory: "/inventory/file/",
-  createInventoryFile: "/inventory/file",
+  createInventoryFile: "/inventory/file/",
 };
 
 class InventoryService {

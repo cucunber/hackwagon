@@ -13,7 +13,7 @@ const Layout: FC = observer(() => {
 
   const getInitialData = useCallback(async () => {
     await authService
-      .verifyToken()
+      .verifyToken().then(() => navigator(`${routes.main}/${routes.newFile}`))
       .catch(() => navigator(routes.auth));
   }, [authService, navigator]);
 
